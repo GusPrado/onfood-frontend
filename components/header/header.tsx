@@ -1,7 +1,44 @@
+import Link from 'next/link';
+import Image from 'next/image';
+import Styles from './header.module.css';
+import { IconBookmark, IconHome } from '@icons';
+
 export function Header() {
   return (
     <header>
-      <p>Header here</p>
+      <nav className={Styles.nav}>
+        <div className={Styles.brand}>
+          <Link href='/'>
+            <a>
+              <Image
+                src='/images/logo.png'
+                width={45}
+                height={36}
+                alt='OnFood'
+              />
+              <span>OnFood</span>
+            </a>
+          </Link>
+        </div>
+        <ul>
+          <li>
+            <Link href='/'>
+              <a>
+                <IconHome />
+                Home
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link href='/favorites'>
+              <a>
+                <IconBookmark />
+                Favoritos
+              </a>
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }
