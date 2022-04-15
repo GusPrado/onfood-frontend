@@ -3,3 +3,4 @@ export * from './footer';
 export * from './page-template';
 export * from './dish';
 export * from './search';
+export * from './character';

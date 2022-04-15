@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { PageTemplate, Search } from '@/components';
+import { PageTemplate, Search, Character } from '@/components';
 import Styles from '../styles/internals.module.css';
 
 export default function Home() {
@@ -22,6 +22,7 @@ export default function Home() {
             Descubra seu novo Delivery favorito. Milhares de opções a um clique.
           </h2>
         </div>
+        <Character />
       </PageTemplate>
     </div>
   );
