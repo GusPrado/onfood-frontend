@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from '../styles/Home.module.css';
-import { Header, Footer } from '@/components';
+import { PageTemplate, Search } from '@/components';
+import Styles from '../styles/internals.module.css';
 
 export default function Home() {
   return (
@@ -12,11 +12,17 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <Header />
+      <PageTemplate>
+        <div className={Styles.content}>
+          <h1>Encontre opções em Delivery próximos à você.</h1>
 
-      <h1 className='text-3xl font-bold underline'>Hello world!</h1>
+          <Search />
 
-      <Footer />
+          <h2>
+            Descubra seu novo Delivery favorito. Milhares de opções a um clique.
+          </h2>
+        </div>
+      </PageTemplate>
     </div>
   );
 }
