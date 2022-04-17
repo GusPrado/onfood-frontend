@@ -11,6 +11,7 @@ export function Dish() {
           alt='Prato'
           width={592}
           height={312}
+          layout='responsive'
         />
       </div>
       <div>
