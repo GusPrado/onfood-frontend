@@ -4,6 +4,7 @@ import { api } from '@/services';
 import { useQuery } from 'react-query';
 
 import { DishType } from '@/types';
+import { DishSkeleton } from '@/components';
 
 export function DishList() {
   const fetchDishes = async () => {
@@ -15,7 +16,7 @@ export function DishList() {
   return (
     <div className={Styles.list}>
       {isFetching ? (
-        <div>Carregando...</div>
+        <DishSkeleton />
       ) : (
         data?.map((dish) => <Dish key={dish.id} {...dish} />)
       )}
