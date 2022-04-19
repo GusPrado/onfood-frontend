@@ -21,7 +21,9 @@
     "baseUrl": ".",
     "paths": {
       "@/components": ["components"],
-      "@/icons": ["icons"]
+      "@/icons": ["icons"],
+      "@/services": ["core/services"],
+      "@/types": ["core/types"]
     }
   },
   "include": [
